@@ -4,6 +4,7 @@ import Button from "../components/Button";
 import Title from "../components/Title";
 import MainContainer from "../containers/MainContainer";
 import MainLayout from "../layouts/MainLayout";
+import NftShowcase from "../sections/NftShowcase";
 
 const Home: NextPage = () => {
   return (
@@ -14,7 +15,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <MainLayout>
-        <div>Hello World</div>
+        <NftShowcase />
       </MainLayout>
     </>
   );
