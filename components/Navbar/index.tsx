@@ -7,6 +7,8 @@ import { useState } from "react";
 import { useRouter } from "next/router";
 import navData from "../../data/nav.json";
 
+import { ConnectButton } from "@rainbow-me/rainbowkit";
+
 interface NavbarProps {
   children?: React.ReactNode;
   cssNavbar?: CSSProp | CSSObject;
@@ -36,18 +38,18 @@ const TopMenu: React.FunctionComponent<NavbarProps> = ({
   return (
     <div css={styles.navbar}>
       <div css={styles.logo}>
-        <NextLink href={"/"}>
-          <Image
-            src={navData.topNavigation.logo}
-            layout={"responsive"}
-            height={130}
-            width={130}
-            alt="logo"
-          ></Image>
-        </NextLink>
+        <Image
+          src={navData.topNavigation.logo}
+          layout={"responsive"}
+          height={130}
+          width={130}
+          alt="logo"
+        ></Image>
       </div>
 
-      <div css={styles.navbarLinks}></div>
+      <div css={styles.navbarLinks}>
+        <ConnectButton />
+      </div>
     </div>
   );
 };
