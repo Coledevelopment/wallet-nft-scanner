@@ -1,0 +1,19 @@
+{
+  "topNavigation": {
+    "logo": "/img/logo/coledev-logo.svg",
+    "links": [
+      {
+        "title": "",
+        "url": "",
+        "external": false,
+        "subLinks": [
+          {
+            "title": "",
+            "url": "",
+            "external": false
+          }
+        ]
+      }
+    ]
+  }
+}
