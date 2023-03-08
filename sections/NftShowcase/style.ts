@@ -28,6 +28,7 @@ const styles = {
     font-size: 24px;
     line-height: 110%px;
     color: #000;
+    text-align: center;
   `,
   image: css`
     position: relative;
@@ -40,6 +41,12 @@ const styles = {
     justify-content: center;
     align-items: center;
     row-gap: 20px;
+
+    @media ${device.tablet} {
+      max-width: 90%;
+      font-size: 14px;
+      margin: 0;
+    }
   `,
   formError: css`
     font-style: noraml;
@@ -54,6 +61,12 @@ const styles = {
   `,
   submitButton: css`
     width: 600px;
+
+    @media ${device.tablet} {
+      max-width: 90%;
+      font-size: 14px;
+      margin: 0;
+    }
   `,
 
   label: css`
@@ -83,10 +96,16 @@ const styles = {
     font-size: 16px;
     line-height: 24px;
     color: #637381;
+
+    @media ${device.tablet} {
+      max-width: 90%;
+      font-size: 16px;
+      margin: 0;
+    }
+    @media ${device.mobile} {
+      font-size: 14px;
+    }
   `,
 };
 
 export default styles;
-// Use for device spesific styling
-// @media ${device.laptop} {}
-// @media ${device.mobile} {}

@@ -14,10 +14,6 @@ const Styles = {
     display: flex;
     align-items: center;
     justify-content: center;
-
-    @media ${device.mobile} {
-      align-items: flex-end;
-    }
   `,
   contentWrap: css`
     max-width: 592px;
@@ -31,9 +27,8 @@ const Styles = {
 
     @media ${device.mobile} {
       max-height: 95vh;
-      max-width: 100%;
+      max-width: 90%;
       margin: 0;
-      overflow-y: scroll;
     }
   `,
   closeButton: css`

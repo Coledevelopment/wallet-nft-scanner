@@ -37,6 +37,11 @@ const styles = {
     height: 500px;
     margin: 5px;
     border-radius: 5px;
+
+    @media ${device.mobile} {
+      width: 80%;
+      height: 80%;
+    }
   `,
 
   nftCardDetails: css`
