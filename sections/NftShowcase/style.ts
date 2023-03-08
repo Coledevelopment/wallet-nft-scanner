@@ -29,6 +29,10 @@ const styles = {
     line-height: 110%px;
     color: #000;
     text-align: center;
+
+    @media ${device.tablet} {
+      padding: 0 10px;
+    }
   `,
   image: css`
     position: relative;

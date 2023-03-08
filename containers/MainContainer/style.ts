@@ -7,7 +7,7 @@ const styles = {
     display: flex;
     flex-direction: column;
     width: 100%;
-    min-height: calc(100vh - 80px);
+    min-height: calc(100vh - 180px);
     background-image: url("/img/pattern-randomized.svg");
   `,
 };
