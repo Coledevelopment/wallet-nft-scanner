@@ -6,6 +6,7 @@ import { useAccount } from "wagmi";
 import { useState } from "react";
 import Button from "../../components/Button";
 import Image from "next/image";
+import NftCard from "../../components/NftCard";
 
 interface NftShowcaseProps {
   cssTitle?: CSSProp | CSSObject;
@@ -40,33 +41,15 @@ const NftShowcase: React.FunctionComponent<NftShowcaseProps> = ({
   return (
     <>
       <div>
-        <p>Hello NFT Showcase</p>
-
         <Button text={"Get NFTs"} theme={"dark"} onClick={fetchNfts}></Button>
       </div>
-      <div>
+      <div css={styles.cardContainer}>
         {nfts &&
           nfts.length > 0 &&
           nfts.map((nft, i) => {
             return (
               <div key={i}>
-                {nft.media[0].format == "mp4" ? (
-                  <video css={styles.image} src={nft.media[0].gateway} controls>
-                    Your browser does not support the video tag.
-                  </video>
-                ) : (
-                  <div>
-                    <img
-                      css={styles.image}
-                      src={nft.media[0].gateway as string}
-                      alt="NFT Image"
-                    />
-                    <p>{nft.tokenId}</p>
-                    <p>{nft.title}</p>
-                    <p>{nft.contract.name}</p>
-                    <p>{nft.contract.openSea.floorPrice}</p>
-                  </div>
-                )}
+                <NftCard nft={nft}></NftCard>
               </div>
             );
           })}

@@ -7,6 +7,8 @@ const styles = {
     display: flex;
     flex-direction: column;
     width: 100%;
+    min-height: calc(100vh - 80px);
+    background-image: url("/img/diamond-sunset.svg");
   `,
 };
 

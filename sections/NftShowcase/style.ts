@@ -3,7 +3,16 @@ import { device } from "../../styles/Breakpoints";
 import { setSize, setLineHeight } from "../../styles/Functions";
 
 const styles = {
-  test: css``,
+  cardContainer: css`
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px;
+    column-gap: 20px;
+    row-gap: 30px;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  `,
   image: css`
     position: relative;
     width: 300px;

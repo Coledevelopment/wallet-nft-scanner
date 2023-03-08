@@ -9,7 +9,7 @@ const styles = {
     flex-direction: column;
     align-items: center;
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
   `,
 
   content: css`
