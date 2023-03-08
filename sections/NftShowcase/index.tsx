@@ -3,7 +3,7 @@ import styles from "./style";
 import { CSSProp, CSSObject } from "styled-components";
 import classNs from "../../utils/classNs";
 import { useAccount } from "wagmi";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
@@ -29,6 +29,7 @@ const NftShowcase: React.FunctionComponent<NftShowcaseProps> = ({
   cssTitle,
 }) => {
   const [nfts, setNfts] = useState<any[]>();
+  const [submitted, setSubmitted] = useState(false);
   const [walletAdr, setWalletAdr] = useState();
   const [isLoading, setIsloading] = useState(false);
 
@@ -47,24 +48,38 @@ const NftShowcase: React.FunctionComponent<NftShowcaseProps> = ({
     resolver: yupResolver(schema),
   });
 
+  useEffect(() => {
+    if (!address) return;
+
+    setValue("walletAddress", address);
+  }, [address]);
+
   const fetchNfts = async () => {
-    console.log(errors.walletAddress?.message);
-    console.log(getValues("walletAddress"));
+    setIsloading(true);
 
     try {
       const res = await fetch("/api/getNftsForAddress", {
         method: "POST",
         body: JSON.stringify({
-          address: walletAdr,
+          address: getValues("walletAddress"),
         }),
       }).then((res) => res.json());
 
       setNfts(res.nfts.ownedNfts);
       console.log(res.nfts);
+      setIsloading(false);
+      setSubmitted(true);
     } catch (e) {
       console.log(e);
     }
   };
+
+  if (isLoading)
+    return (
+      <div css={styles.cardContainer}>
+        <img src={"/img/loading.jpg"} alt="NFT Image" />
+      </div>
+    );
 
   return (
     <>
@@ -93,20 +108,25 @@ const NftShowcase: React.FunctionComponent<NftShowcaseProps> = ({
             text={"Get NFTs"}
             theme={"dark"}
             cssButton={styles.submitButton}
-            onClick={() => fetchNfts()}
           ></Button>
         </form>
       </div>
+
       <div css={styles.cardContainer}>
-        {nfts &&
-          nfts.length > 0 &&
-          nfts.map((nft, i) => {
-            return (
-              <div key={i}>
-                <NftCard nft={nft}></NftCard>
-              </div>
-            );
-          })}
+        {nfts && nfts.length > 0
+          ? nfts.map((nft, i) => {
+              return (
+                <div key={i}>
+                  <NftCard nft={nft}></NftCard>
+                </div>
+              );
+            })
+          : submitted && (
+              <Text
+                text={"No NFTs in this Wallet to show"}
+                cssText={styles.headerText}
+              />
+            )}
       </div>
     </>
   );

@@ -1,10 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { Network, Alchemy, NftFilters } from "alchemy-sdk";
 
-type Data = {
-  walletAdr: string;
-};
-
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<any>
@@ -20,10 +16,9 @@ export default async function handler(
   };
 
   const alchemy = new Alchemy(config);
-
   try {
     const nfts = await alchemy.nft.getNftsForOwner(
-      "0x8579c7B76477643A7B26F86CD20913C6dAD4129E",
+      JSON.parse(req.body).address,
       {
         pageSize: 100,
       }
@@ -34,7 +29,8 @@ export default async function handler(
   } catch (e) {
     console.warn(e);
     res.status(500).send({
-      message: "something went wrong, check the log in your terminal",
+      message: "Something went wrong",
     });
   }
 }
+//0x8579c7B76477643A7B26F86CD20913C6dAD4129E
