@@ -20,6 +20,7 @@ export const GlobalFonts = styled.createGlobalStyle`
   }
 
   :root {
+    --ff-Montserrat: Montserrat, sans-serif;
     --ff-SurtNormal: SurtNormal, sans-serif;
     --ff-Arial: Arial, sans-serif;
   }

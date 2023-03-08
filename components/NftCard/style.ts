@@ -92,6 +92,3 @@ const styles = {
 };
 
 export default styles;
-// Use for device spesific styling
-// @media ${device.laptop} {}
-// @media ${device.mobile} {}
