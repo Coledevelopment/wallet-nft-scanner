@@ -6,13 +6,13 @@ const styles = {
   nftCard: css`
     color: #fff;
     width: 300px;
-    border: 10px solid #000;
-    border-radius: 10px;
-    background-color: #222;
+
+    border-radius: 5px;
+    background-color: #56586c;
 
     :hover {
-      box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.6);
-      tramsform: scale(1.1);
+      box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.6);
+      transform: scale(1.02);
     }
   `,
   nftCardMediaContainer: css`
@@ -21,8 +21,10 @@ const styles = {
     align-items: center;
   `,
   nftCardMedia: css`
-    width: 280px;
-    height: 280px;
+    width: 290px;
+    height: 290px;
+    margin: 5px;
+    border-radius: 5px;
   `,
 
   nftCardDetails: css`

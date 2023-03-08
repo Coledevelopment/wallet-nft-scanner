@@ -70,7 +70,7 @@ export const GlobalStyles = styled.createGlobalStyle`
   h4,
   h5,
   h6 {
-    font-family: var(--ff-SurtNormal);
+    font-family: var(--ff-Arial);
     text-transform: uppercase;
   }
 `;

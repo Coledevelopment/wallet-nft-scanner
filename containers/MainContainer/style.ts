@@ -8,7 +8,7 @@ const styles = {
     flex-direction: column;
     width: 100%;
     min-height: calc(100vh - 80px);
-    background-image: url("/img/diamond-sunset.svg");
+    background-image: url("/img/pattern-randomized.svg");
   `,
 };
 
