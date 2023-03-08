@@ -24,6 +24,9 @@ const styles = {
       transform: scale(1.02);
       box-shadow: 0px 0px 20px var(--color-pink);
     }
+    @media ${device.mobile} {
+      display: none;
+    }
   `,
   navbarLinks: css`
     width: 100%;

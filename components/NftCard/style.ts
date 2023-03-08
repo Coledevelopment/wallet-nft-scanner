@@ -73,6 +73,11 @@ const styles = {
     font-size: 16px;
     width: 100%;
     height: 50px;
+
+    @media ${device.mobile} {
+      font-size: 14px;
+      line-height: 100%;
+    }
   `,
   detailsNames: css`
     display: flex;

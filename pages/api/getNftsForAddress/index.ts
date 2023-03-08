@@ -18,10 +18,7 @@ export default async function handler(
   const alchemy = new Alchemy(config);
   try {
     const nfts = await alchemy.nft.getNftsForOwner(
-      JSON.parse(req.body).address,
-      {
-        pageSize: 100,
-      }
+      JSON.parse(req.body).address
     );
 
     console.log("NFTs: ", await nfts);

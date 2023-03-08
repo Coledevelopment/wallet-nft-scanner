@@ -31,13 +31,19 @@ const Footer: React.FunctionComponent<FooterProps> = ({
       </div>
       <div css={styles.footerSocials}>
         <div css={styles.footerSocialIcon}>
-          <Image
-            src={"/img/icon/linkedin.svg"}
-            layout={"fixed"}
-            height={40}
-            width={40}
-            alt="linkedin"
-          />
+          <a
+            href="https://www.linkedin.com/in/christian-cole-595323a5/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Image
+              src={"/img/icon/linkedin.svg"}
+              layout={"fixed"}
+              height={40}
+              width={40}
+              alt="linkedin"
+            />
+          </a>
         </div>
       </div>
     </div>
