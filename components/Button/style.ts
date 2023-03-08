@@ -14,11 +14,21 @@ const styles = {
     line-height: 36px;
     letter-spacing: 0.085em;
     padding: 0 2rem;
+
+    &: hover {
+      cursor: pointer;
+
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+      transform: scale(1.02);
+    }
   `,
   dark: css`
     background-color: #000;
   `,
-  light: css``,
+  light: css`
+    background-color: #ccc;
+    color: #000;
+  `,
   primary: css`
     background-color: var(--color-pitch-black);
     color: var(--color-white);

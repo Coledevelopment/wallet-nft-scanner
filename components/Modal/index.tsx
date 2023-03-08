@@ -39,7 +39,7 @@ const ModalComponent: React.FunctionComponent<ModalProps> = ({
     <div css={Styles.container}>
       <div css={Styles.contentWrap} ref={ref}>
         <div css={Styles.closeButton} onClick={onClose}>
-          <Image src={"/icons/modal-close.svg"} alt="" layout="fill" />
+          <Image src={"/img/modal-close.svg"} alt="" layout="fill" />
         </div>
         <div css={Styles.content}>{children}</div>
       </div>

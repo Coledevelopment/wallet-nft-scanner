@@ -20,13 +20,13 @@ const Styles = {
     }
   `,
   contentWrap: css`
-    max-width: ${setSize(592)};
+    max-width: 592px;
     width: 100%;
     background-color: var(--color-white);
     position: relative;
 
     @media ${device.laptop} {
-      max-width: 59.2rem;
+      max-width: 592px;
     }
 
     @media ${device.mobile} {
@@ -38,31 +38,31 @@ const Styles = {
   `,
   closeButton: css`
     position: absolute;
-    right: ${setSize(16)};
-    top: ${setSize(16)};
-    width: ${setSize(16)};
-    height: ${setSize(16)};
+    right: 16px;
+    top: 16px;
+    width: 16px;
+    height: 16px;
     cursor: pointer;
 
     @media ${device.laptop} {
-      width: 1.6rem;
-      height: 1.6rem;
-      right: 1.6rem;
-      top: 1.6rem;
+      right: 16px;
+      top: 16px;
+      width: 16px;
+      height: 16px;
     }
 
     @media ${device.mobile} {
-      width: 1.6rem;
-      height: 1.6rem;
-      right: 1.6rem;
-      top: 1.6rem;
+      right: 16px;
+      top: 16px;
+      width: 16px;
+      height: 16px;
     }
   `,
   content: css`
-    padding: ${setSize(32)};
+    padding: 32px;
 
     @media ${device.laptop} {
-      padding: 3.2rem;
+      padding: 32px;
     }
 
     @media ${device.mobile} {
