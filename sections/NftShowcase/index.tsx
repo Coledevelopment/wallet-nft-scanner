@@ -115,11 +115,7 @@ const NftShowcase: React.FunctionComponent<NftShowcaseProps> = ({
       <div css={styles.cardContainer}>
         {nfts && nfts.length > 0
           ? nfts.map((nft, i) => {
-              return (
-                <div key={i}>
-                  <NftCard nft={nft}></NftCard>
-                </div>
-              );
+              return <NftCard key={i} nft={nft}></NftCard>;
             })
           : submitted && (
               <Text
