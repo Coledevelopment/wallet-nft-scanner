@@ -8,7 +8,7 @@ Clone the repo to your local machine.
 
 Install the application using yarn:
 ``` node
-yarn dev
+yarn
 ```
 
 To run the development server:
