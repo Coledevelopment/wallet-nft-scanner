@@ -1,4 +1,4 @@
-# NFT Scanner Application Etherium Mainnet
+# NFT Scanner Application Ethereum Mainnet
 
 ![Application Appearance](https://github.com/Coledevelopment/wallet-nft-scanner/blob/main/public/img/app-pr-scr.png)
 
