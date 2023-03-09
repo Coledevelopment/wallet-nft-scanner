@@ -3,17 +3,19 @@ This is a Next.js project bootstrapped with create-next-app.
 # Getting Started
 Clone the repo to your local machine. 
 To run the development server:
-
+``` node
 yarn dev
-
+```
 Open http://localhost:3000 with your browser to see the result.
 
 ## Known issues
 There is a known issue with the development server in this application. Running this application on localhost using yarn dev might give an Websocket error. A workaround for this is to build the app, and serve it.
 
 to build and run the application locally :
+``` node
 yarn build
 yarn start
+```
 Open http://localhost:3000 with your browser to see the result.
 
 # About the app
