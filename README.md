@@ -5,6 +5,12 @@
 ## Getting Started
 
 Clone the repo to your local machine. 
+
+Install the application using yarn:
+``` node
+yarn dev
+```
+
 To run the development server:
 ``` node
 yarn dev
