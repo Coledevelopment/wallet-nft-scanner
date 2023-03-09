@@ -19,7 +19,7 @@ Open http://localhost:3000 with your browser to see the result.
 # About the app
 This is a 48 hour "take-home test". 
 
-## The apllication task is to create:
+## The application task is to create:
 A feature that displays a list of NFTs (Non-Fungible Tokens) of a given address.
 
 The list of NFTs should be displayed as a grid of cards, with each card displaying the
